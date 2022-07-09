@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    
+}
+
+.header {
+    width: 100vw;
+    height: 50px;
+    background-color: rgba(53, 151, 222, 0.75);
+    position: relative;
+    position: fixed; 
+    /* tạo thuộc tính lơ lửng không ảnh hưởng khi lăn chuột */
+    z-index: 1
+}
+.header img {
+    height: 55px;
+    position: absolute;
+    left: 10px
+}
+
+.header h1{
+    text-align: center;
+    line-height: 50px;
+    color: white
+}
+
+.header .menu {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    right: 15px
+    /* background-color: rgba(111, 111, 111, 0.2); */
+    /* position: fixed; */
+}
+
+.header .menu ul {
+    display: flex;
+    float: right;
+    list-style: none;
+    /* margin-right: 10px */
+}
+
+.header .menu ul a {
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    color: rgb(35, 37, 32);
+    padding: 0 5px;
+    font-weight: bold;
+    transition: 0.2s;
+    font-size: 18px;
+    position: relative;
+
+}
+
+.header .menu ul a::after {
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    transition: 0.3s ease-in-out
+}
+
+.header .menu ul a:hover::after {
+
+    width: 100px;
+
+}
+.header .menu ul a:hover{
+    background-color: #3f94e9;
+    color: white;
+    transition: 0.5s ease-in-out
+}
+
+.container {
+    padding-top: 50px
+}
+
+h3 {
+    text-align: center;
+    margin: 3px 0
+}
+
+
+.container .tongquan {
+    min-height: 100px;
+    display: flex;
+    padding: 0 5px
+}
+
+.container .tongquan .ketquatimkiem {
+    width: 100%;
+}
+
+.container .tongquan .ketquatimkiem table {
+    width: 100%;
+    background-color: azure;
+
+}
+
+.container .contain {
+    /* min-height: 4525px; */
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+
+.container .contain :where(.timkiem, .table) {
+    border: 1px solid #dcdcdc;
+    border-bottom: none;
+}
+
+.container .contain .timkiem {
+    /* border-bottom: 1px solid ; */
+    padding-bottom: 40px
+
+}
+
+.container .contain button {
+    float: right;
+    margin: 5px 10px;
+    width: 70px;
+    font-weight: bold;
+    background-color:rgb(66, 211, 46);
+    border-radius: 5px;
+    padding: 3px;
+    border: 0.3px solid black;
+}
+
+.container .contain .timkiem tr {
+    height: 30px
+}
+
+
+.container .contain .timkiem tr th,td{
+    text-align: center
+    
+}
+.container .contain .timkiem tr td:first-child{
+    width: 120px;
+}
+
+.container .contain .timkiem tr input, select {
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 8px
+}
+
+.container .contain .table table {
+    width: 100%;
+    background-color: azure;
+    /* border: 1px solid rgb(193, 191, 191); */
+    border-radius: 5px;
+
+}
+
+.container .contain .table td {
+    text-align: center;
+}
+
+.listNV .delete{
+    background-color:rgb(66, 211, 46);
+}
+
+.listNV .edit{
+    background-color:rgb(246, 249, 105);
+}
+
+.footer {
+    height: 100px;
+    background-color: aqua;
+    position: relative;
+    font-weight: bold;
+}
+
+.footer .img img {
+    height: 80px;
+    position: absolute;
+    top: 10px;
+}
+
+.footer .contact {
+    position: absolute;
+    left: 300px;
+    top: 20px
+}
+
+.footer .diachi {
+    position: absolute;
+    left: 600px;
+    top: 20px
+}
+
+.footer .qr img {
+    position: absolute;
+    height: 80px;
+    top: 9px;
+    left: 1000px
+}

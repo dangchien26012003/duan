@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý nhân viên</title>
+    <link rel="stylesheet" href="quanlynhanvien.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="../1BaiTapNHhom/image/logo.png" alt="">
+        <h1>Quản lý nhân viên</h1>
+        <div class="menu">
+            <div class="list">
+                <ul>
+                    <a href="#">
+                        <li>Lợi nhuận</li>
+                    </a>
+                    <a href="#">
+                        <li>Nhân viên</li>
+                    </a>
+                    <a href="#">
+                        <li>Đối tác</li>
+                    </a>
+                    <a href="#">
+                        <li>Khách hàng</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="tongquan">
+            <div class="ketquatimkiem">
+                <h3>Kết quả tìm kiếm</h3>
+                <table border=1 cellspacing=0 id="timkiem">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã nhân viên</th>
+                        <th>Tên nhân viên</th>
+                        <th>Nơi sinh</th>
+                        <th>Nơi ở</th>
+                        <th>Số điện thoại</th>
+                        <th>Ngày vào</th>
+                        <th>Vị trí</th>
+                        <th>Lương hiện tại</th>
+                        <th>Ngày công</th>
+                        <th>Ngày nghỉ</th>
+                        <th>Ghi chú</th>
+                        <th>Hành động</th>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="contain">
+            <div class="them">
+                <div class="timkiem">
+                    <h3>Tìm kiếm</h3>
+                    <table>
+                        <tr>
+                            <td>
+                                Mã nhân viên:
+                            </td>
+                            <td>
+                                <input type="text" id="timma">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Tên nhân viên:
+                            </td>
+                            <td>
+                                <input type="text" id="timten">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Số ngày đi làm:
+                            </td>
+                            <td>
+                                <input type="number" id="timngaylam">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Lương trên:
+                            </td>
+                            <td>
+                                <input type="number" id="timluong">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Nghỉ trên:
+                            </td>
+                            <td>
+                                <input type="number" id="timgaynghi">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Vị trí:
+                            </td>
+                            <td>
+                                <!-- <select id="nhacc" style="margin-left: 10px; height: 30px; font-weight: bold;">
+                                    <option>Nhà CC 1</option>
+                                    <option>Nhà CC 2</option>
+                                    <option>Nhà CC 3</option>
+                                    <option>Nhà CC 4</option>
+                                </select> -->
+                                <select id="timvitri">
+                                    <option >Kho</option>
+                                    <option >Bán Hàng</option>
+                                    <option >Kĩ thuật</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <button onclick="look()">Tìm kiếm</button>
+                    <div class="button"></div>
+                </div>
+                <div class="themnv">
+                    <div class="timkiem">
+                        <h3>Thêm nhân viên</h3>
+                        <table>
+                            <tr>
+                                <td>
+                                    Mã nhân viên:
+                                </td>
+                                <td>
+                                    <input type="text" id="themma">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Tên nhân viên:
+                                </td>
+                                <td>
+                                    <input type="text" id="themten">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   Nơi sinh:
+                                </td>
+                                <td>
+                                    <input type="text" id="themnoisinh">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nơi ở:
+                                </td>
+                                <td>
+                                    <input type="text" id="themnoio">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Số điện thoại:
+                                </td>
+                                <td>
+                                    <input type="number" id="themsdt">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Ngày vào:
+                                </td>
+                                <td>
+                                    <input type="date" id="themngayvao">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Vị trí:
+                                </td>
+                                <td>
+                                    <select name="" id="themvitri">
+                                        <option>Kho</option>
+                                        <option>Bán Hàng</option>
+                                        <option>Kĩ thuật</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Lương hiện tại:
+                                </td>
+                                <td>
+                                    <input type="number" id="themluong">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Ngày công:
+                                </td>
+                                <td>
+                                    <input type="number" id="themcong">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Ngày Nghỉ:
+                                </td>
+                                <td>
+                                    <input type="number" id="themnghi">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Ghi chú:
+                                </td>
+                                <td>
+                                    <input type="text" id="themghichu">
+                                </td>
+                            </tr>
+                        </table>
+                        <button onclick="luu()">Lưu</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="table">
+                <h3>Bảng nhân viên</h3>
+                <table border=1 cellspacing=0 id="listNV">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã nhân viên</th>
+                        <th>Tên nhân viên</th>
+                        <th>Nơi sinh</th>
+                        <th>Nơi ở</th>
+                        <th>Số điện thoại</th>
+                        <th>Ngày vào</th>
+                        <th>Vị trí</th>
+                        <th>Lương hiện tại</th>
+                        <th>Ngày công</th>
+                        <th>Ngày nghỉ</th>
+                        <th>Ghi chú</th>
+                        <th>Hành động
+                        </th>
+                    </tr>
+                    <!-- <tr>
+                        <td>STT</td>
+                        <td>Mã nhân viên</td>
+                        <td>Tên nhân viên</td>
+                        <td>Địa chỉ</td>
+                        <td>Nơi sống</td>
+                        <td>Số điện tdoại</td>
+                        <td>Ngày vào</td>
+                        <td>Vị trí</td>
+                        <td>Lương hiện tại</td>
+                        <td>Ngày công</td>
+                        <td>Ghi chú</td>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="img">
+            <img src="../1BaiTapNHhom/image/logo.png" alt="logo">
+        </div>
+        <div class="contact">
+            <span>Số điện thoại liên hệ:</span>
+            <div class="sdt">
+                Hotline: 19008888
+                <br>
+                Di động: 0333968888
+            </div>
+        </div>
+        <div class="diachi">
+            <span>Địa chỉ:</span>
+            <h3>Trịnh Văn Bô, Nam Từ Niêm, Hà Nội</h3>
+        </div>
+        <div class="qr">
+            <img src="https://vi.qr-code-generator.com/wp-content/themes/qr/new_structure/markets/basic_market/generator/dist/generator/assets/images/websiteQRCode_noFrame.png"
+                alt="">
+        </div>
+    </div>
+    <script src="quanlynhanvien.js"></script>
+</body>
+
+</html>
