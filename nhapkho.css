@@ -34,6 +34,7 @@
     background-color: rgba(225, 227, 227, 0.4);
     border-right: 2px solid rgba(225, 227, 227);
     /* position: fixed; */
+    overflow: hidden
 }
 
 .body-left div {
@@ -47,6 +48,36 @@
 .body-left div:hover {
     background-color:rgba(72, 191, 227, 0.996);
     transition: 0.1s;
+}
+
+.body-left .active {
+    position: relative;
+    padding-left: 20px;
+    /* background-color: rgba(72, 191, 227, 0.996) */
+}
+
+.body-left .active::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    box-shadow: 10px 10px 0 0 rgba(72, 191, 227, 0.996);
+}
+
+.body-left .active::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+    box-shadow: 10px -10px 0 0 rgba(72, 191, 227, 0.996);
 }
 
 a {
